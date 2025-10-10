@@ -41,7 +41,7 @@ function oscillator()
     fit_accel = @(t) A * exp(-sigma * t) .* cos(omega_d * t - phi);
 
     %damping coefficient
-    c = 2 * sqrt(14.22 * 0.748) * zeta;
+    c = 2 * sqrt(14.22 * 0.748);
 
     figure();
     hold on;
@@ -55,11 +55,11 @@ function oscillator()
     legend('show');
     grid on;
     
-    fprintf('System Parameters\n');
+    fprintf('System Parameters');
     fprintf('Moving Mass (kg): %.4f\n', mass);
     fprintf('Damping Coefficient (c): %.4f\n', c);
-    fprintf('Exponential decay rate (sigma): %.4f\n', sigma);
-    fprintf('Damped Frequency (omega_d): %.4f rad/s\n', omega_d);
-    fprintf('Natural Frequency (omega_n): %.4f rad/s\n', omega_n);
+    fprintf('Exponential decay rate (sigma): %.4f\n', c);
     fprintf('Damping Ratio (zeta): %.4f\n', zeta);
+    fprintf('Damped Natural Frequency (omega_d): %.4f rad/s\n', omega_d);
+    fprintf('Natural Frequency (omega_n): %.4f rad/s\n', omega_n);
 end
