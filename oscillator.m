@@ -54,6 +54,25 @@ function oscillator()
     ylabel('Acceleration (m/s^2)');
     legend('show');
     grid on;
+    hold off;
+
+
+    %complex coefficients
+    figure();
+    plot(-sigma, omega_d, 'r.', 'MarkerSize', 20);
+    hold on;
+    plot(-sigma, -omega_d, 'b.', 'MarkerSize', 20);
+    xlim([-2.5, 2.5]);
+    ylim([-10, 10]);
+    title('Complex Exponential Coefficients')
+    grid on;
+    plot(xlim, [0 0], 'k--', 'LineWidth', 1);
+    plot([0 0], ylim, 'k--', 'LineWidth', 1);
+
+    legend("\lambda_1", "\lambda_2", "x-axis", "y-axis")
+
+    hold off;
+
     
     fprintf('System Parameters\n');
     fprintf('Moving Mass (kg): %.4f\n', mass);
