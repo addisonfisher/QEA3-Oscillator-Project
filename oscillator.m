@@ -69,7 +69,7 @@ function oscillator()
     plot(xlim, [0 0], 'k--', 'LineWidth', 1);
     plot([0 0], ylim, 'k--', 'LineWidth', 1);
 
-    legend("\lambda_1", "\lambda_2", "x-axis", "y-axis")
+    legend("\lambda_1", "\lambda_2", "X-axis", "Y-axis")
 
     hold off;
 
